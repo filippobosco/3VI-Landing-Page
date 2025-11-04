@@ -189,13 +189,14 @@ const CTASection = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="citta" className="block text-sm font-medium text-gray-700 mb-2">
-                        Città/Zona
+                        Città/Zona *
                       </label>
                       <select
                         id="citta"
                         name="citta"
                         value={formData.citta}
                         onChange={handleInputChange}
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#05668D] focus:border-transparent transition-all duration-200 text-gray-900"
                       >
                         <option value="">Seleziona zona</option>
@@ -211,7 +212,7 @@ const CTASection = () => {
                     </div>
                     <div>
                       <label htmlFor="tipoImmobile" className="block text-sm font-medium text-gray-700 mb-2">
-                        Tipo Immobile
+                        Tipo Immobile *
                       </label>
                       <div className="space-y-2">
                         {['Casa', 'Ufficio', 'Negozio'].map((tipo) => (
@@ -222,6 +223,7 @@ const CTASection = () => {
                               value={tipo}
                               checked={formData.tipoImmobile === tipo}
                               onChange={handleInputChange}
+                              required
                               className="text-[#05668D] focus:ring-[#05668D]"
                             />
                             <span className="text-gray-700">{tipo}</span>
@@ -234,13 +236,14 @@ const CTASection = () => {
                   {/* Rooms */}
                   <div>
                     <label htmlFor="numeroStanze" className="block text-sm font-medium text-gray-700 mb-2">
-                      Numero di Stanze
+                      Numero di Stanze *
                     </label>
                     <select
                       id="numeroStanze"
                       name="numeroStanze"
                       value={formData.numeroStanze}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#05668D] focus:border-transparent transition-all duration-200 text-gray-900"
                     >
                       <option value="">Seleziona</option>
@@ -255,7 +258,7 @@ const CTASection = () => {
                   {/* Impianto Predisposto */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      L&apos;impianto è predisposto?
+                      L&apos;impianto è predisposto? *
                     </label>
                     <div className="space-y-2">
                       {['Sì', 'No'].map((risposta) => (
@@ -266,6 +269,7 @@ const CTASection = () => {
                             value={risposta}
                             checked={formData.situazioneAttuale === risposta}
                             onChange={handleInputChange}
+                            required
                             className="text-[#05668D] focus:ring-[#05668D]"
                           />
                           <span className="text-gray-700">{risposta}</span>
