@@ -5,7 +5,7 @@ import { useRef, useState, useEffect } from 'react';
 
 const StatsSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const stats = [
     { number: 15, suffix: '+', label: 'Anni di esperienza nel settore' },
