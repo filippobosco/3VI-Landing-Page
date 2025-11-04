@@ -111,7 +111,7 @@ export default function ThankYouPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Contatto telefonico</h3>
-                <p className="text-gray-600">Ti chiameremo entro 24 ore per fissare l'appuntamento per il sopralluogo.</p>
+                <p className="text-gray-600">Ti chiameremo entro 24 ore per fissare l&apos;appuntamento per il sopralluogo.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

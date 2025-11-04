@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   PhoneIcon, 
   ChatBubbleLeftRightIcon, 
-  MapPinIcon, 
-  ClockIcon 
+  MapPinIcon
 } from '@heroicons/react/24/outline';
 
 const Footer = () => {
@@ -82,7 +81,7 @@ const Footer = () => {
                   <h3 className="text-lg font-semibold mb-2">Scrivici su WhatsApp</h3>
                   <p className="text-green-400 font-bold text-xl mb-2">352 0099268</p>
                   <p className="text-gray-400 text-sm">Rispondiamo in tempo reale</p>
-                  <p className="text-gray-400 text-sm">durante l'orario lavorativo</p>
+                  <p className="text-gray-400 text-sm">durante l&apos;orario lavorativo</p>
                 </div>
               </motion.div>
 

@@ -256,7 +256,7 @@ const CTASection = () => {
                   {/* Impianto Predisposto */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      L'impianto è predisposto?
+                      L&apos;impianto è predisposto?
                     </label>
                     <div className="space-y-2">
                       {['Sì', 'No'].map((risposta) => (
@@ -302,7 +302,7 @@ const CTASection = () => {
                       required
                     />
                     <label htmlFor="privacy" className="text-sm text-gray-600">
-                      Ho letto e accetto l'<a href="https://3vi.net/informativa-privacy/" target="_blank" rel="noopener noreferrer" className="text-[#05668D] underline hover:text-[#0466C8]">informativa privacy</a> e autorizzo il trattamento dei miei dati personali
+                      Ho letto e accetto l&apos;<a href="https://3vi.net/informativa-privacy/" target="_blank" rel="noopener noreferrer" className="text-[#05668D] underline hover:text-[#0466C8]">informativa privacy</a> e autorizzo il trattamento dei miei dati personali
                     </label>
                   </div>
 

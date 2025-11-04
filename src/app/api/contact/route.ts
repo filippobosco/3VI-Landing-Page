@@ -15,24 +15,27 @@ interface ContactFormData {
 }
 
 // Validazione dei dati
-function validateFormData(data: any): { isValid: boolean; errors: string[] } {
+function validateFormData(data: unknown): { isValid: boolean; errors: string[] } {
   const errors: string[] = [];
 
+  // Type guard
+  const formData = data as Record<string, string>;
+
   // Campi obbligatori
-  if (!data.nome?.trim()) errors.push('Nome è obbligatorio');
-  if (!data.cognome?.trim()) errors.push('Cognome è obbligatorio');
-  if (!data.email?.trim()) errors.push('Email è obbligatoria');
-  if (!data.telefono?.trim()) errors.push('Telefono è obbligatorio');
+  if (!formData.nome?.trim()) errors.push('Nome è obbligatorio');
+  if (!formData.cognome?.trim()) errors.push('Cognome è obbligatorio');
+  if (!formData.email?.trim()) errors.push('Email è obbligatoria');
+  if (!formData.telefono?.trim()) errors.push('Telefono è obbligatorio');
 
   // Validazione email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (data.email && !emailRegex.test(data.email)) {
+  if (formData.email && !emailRegex.test(formData.email)) {
     errors.push('Email non valida');
   }
 
   // Validazione telefono (italiano)
   const phoneRegex = /^[\d\s+()-]{8,}$/;
-  if (data.telefono && !phoneRegex.test(data.telefono)) {
+  if (formData.telefono && !phoneRegex.test(formData.telefono)) {
     errors.push('Telefono non valido');
   }
 
@@ -262,7 +265,6 @@ export async function POST(request: NextRequest) {
 
     // Determina lo stato della risposta
     const allFailed = !results.emailSent && !results.sheetSaved;
-    const partialSuccess = results.emailSent || results.sheetSaved;
 
     if (allFailed) {
       // Entrambe le operazioni sono fallite

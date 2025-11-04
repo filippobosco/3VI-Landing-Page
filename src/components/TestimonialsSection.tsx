@@ -129,7 +129,7 @@ const TestimonialsSection = () => {
 
                   {/* Testimonial Text */}
                   <blockquote className="text-lg md:text-xl text-gray-700 italic leading-relaxed mb-8">
-                    "{testimonials[currentIndex].text}"
+                    &ldquo;{testimonials[currentIndex].text}&rdquo;
                   </blockquote>
 
                   {/* Author */}

@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { CheckCircleIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
 import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
 import ProblemSection from '@/components/ProblemSection';
