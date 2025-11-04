@@ -50,8 +50,7 @@ const FAQSection = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: 'easeOut'
+        duration: 0.5
       }
     }
   };
@@ -107,7 +106,7 @@ const FAQSection = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-6">
