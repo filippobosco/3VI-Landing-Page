@@ -95,7 +95,7 @@ const CTASection = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, threshold: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
           className="max-w-6xl mx-auto"
         >
