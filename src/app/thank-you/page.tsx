@@ -3,8 +3,15 @@
 import { motion } from 'framer-motion';
 import { CheckCircleIcon, PhoneIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function ThankYouPage() {
+  // Track Meta Pixel CompleteRegistration event
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'CompleteRegistration');
+    }
+  }, []);
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
