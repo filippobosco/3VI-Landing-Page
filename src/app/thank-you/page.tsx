@@ -5,11 +5,18 @@ import { CheckCircleIcon, PhoneIcon, ArrowLeftIcon } from '@heroicons/react/24/o
 import Link from 'next/link';
 import { useEffect } from 'react';
 
+// Declare fbq type for Meta Pixel
+declare global {
+  interface Window {
+    fbq?: (action: string, eventName: string) => void;
+  }
+}
+
 export default function ThankYouPage() {
   // Track Meta Pixel CompleteRegistration event
   useEffect(() => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'CompleteRegistration');
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'CompleteRegistration');
     }
   }, []);
   const fadeInUp = {
