@@ -159,14 +159,14 @@ export default function ThankYouPage() {
           </h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+393338479696"
+              href="tel:+390290721585"
               className="flex items-center gap-2 bg-white text-[#05668D] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors w-full md:w-auto justify-center"
             >
               <PhoneIcon className="w-5 h-5" />
-              <span>333 847 9696</span>
+              <span>02 90721585</span>
             </a>
             <a
-              href="https://wa.me/393338479696"
+              href="https://wa.me/3520099268"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#20BD5A] transition-colors w-full md:w-auto justify-center"
